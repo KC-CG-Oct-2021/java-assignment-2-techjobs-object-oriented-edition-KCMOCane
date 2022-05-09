@@ -38,7 +38,7 @@ public class Job {
    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Job job = (Job) 0;
+        Job job = (Job) o;
         return id == job.id;
    }
 
@@ -65,11 +65,11 @@ public class Job {
         if (positionType.getValue().equals("")){
             positionType.setValue("Data not available");
         }
-        String jobStr= "\n" + "ID:"+ this.id + "\n" +
+        String jobStr= "\n" + "ID: "+ this.id + "\n" +
                 "Name: " + this.name +"\n" +
                 "Employer: " + this.employer +"\n" +
                 "Location: " + this.location +"\n" +
-                "Position Type:" + this.positionType + "\n" +
+                "Position Type: " + this.positionType + "\n" +
                 "Core Competency: " + this.coreCompetency + "\n";
         return jobStr;
     }

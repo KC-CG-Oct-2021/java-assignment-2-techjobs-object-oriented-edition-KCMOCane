@@ -67,12 +67,12 @@ public class JobTest {
     }
 
     @Test
-    public void toStringReturnsBlankLines(){
+    public void testToStringContainsCorrectLabelsAndData(){
         assertEquals("\n\n",test_job1.toString() );
     }
 
     @Test
-    public void toStringReturn(){
+    public void testToStringStartsAndEndsWithNewLine(){
         assertEquals("\n" + "ID: 3\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
@@ -82,7 +82,7 @@ public class JobTest {
     }
 
     @Test
-    public void testEmptyJob(){
+    public void testToStringHandlesEmptyField(){
         assertEquals("\n" + "ID: 5\n" +
                 "Name: Data not available\n" +
                 "Employer: Data not available\n" +
