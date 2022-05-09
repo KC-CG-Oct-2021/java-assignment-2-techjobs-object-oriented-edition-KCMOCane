@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 /**
  * Created by LaunchCode
  */
-@RunWith(JUnit4.class)
+
 public class JobTest {
     private Job job1;
     private Job job2;
@@ -28,12 +28,12 @@ public class JobTest {
     }
 
     @Test
-    public void settingUniqueIdFields(){
+    public void testJobConstructorSetsAllFields(){
         assertFalse(job1.equals(job2 ));
     }
 
     @Test
-    public void idFieldIsSet(){
+    public void testSettingJobId(){
         assertEquals(job1.getId(),1);
     }
 
